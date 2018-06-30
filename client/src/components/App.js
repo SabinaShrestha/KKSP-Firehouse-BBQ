@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Componenet } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Menu from './Menu';
 import PlaceOrder from './PlaceOrder';
@@ -9,14 +9,14 @@ import Login from './Login';
 import Register from './Register';
 import Flash from './Flash';
 import Home from './Home';
-import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
+import { Segment } from 'semantic-ui-react';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div>
+      <Segment style={styles.background}>
         <NavBar />
         <Flash />
         <FetchUser>
@@ -30,9 +30,14 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
-      </div>
+      </Segment>
     );
   }
 }
 
+const styles = {
+  background: {
+    backgroundColor: '#000000',
+  },
+}
 export default App;

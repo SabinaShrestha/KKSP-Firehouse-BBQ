@@ -13,7 +13,7 @@ class Menu extends React.Component {
 			{ name: 'beef brisquet', price: 8, category: 'sandwiches' },
 			{ name: 'potato salad', price: 1, category: 'sides' },
 			{ name: 'can', price: 1, category: 'sodas' },
-			{	name:	'Beans (BBQ or Vegetarian)', price: 1, category: 'sides'},
+			{ name:	'Beans (BBQ or Vegetarian)', price: 1, category: 'sides'},
 			{ name: 'Potato Salad', price: 1, category: 'sides' },
 			{ name: 'Collard Greens', price: 1, category: 'sides' },
 			{ name: 'Sticky Rice', price: 1, category: 'sides' },
