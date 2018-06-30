@@ -29,7 +29,6 @@ class NavBar extends Component {
       </Menu.Menu>
     );
   }
-  
   render() {
     return (
       <div>
@@ -40,13 +39,15 @@ class NavBar extends Component {
           <Link to='/menu'>
             <Menu.Item name='menu' />
           </Link>
+          <Link to='/order'>
+            <Menu.Item name='place an order' />
+          </Link>
           { this.rightNavs() }
         </Menu>
       </div>
     );
   }
 }
-
 const mapStateToProps = state => {
   return { user: state.user };
 };

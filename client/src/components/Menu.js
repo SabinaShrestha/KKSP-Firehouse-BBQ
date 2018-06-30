@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-	Grid, 
 	Table,
 	Container, 
 } from 'semantic-ui-react';

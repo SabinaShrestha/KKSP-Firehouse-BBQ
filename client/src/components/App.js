@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Menu from './Menu';
-import Order from './Order';
+import PlaceOrder from './PlaceOrder';
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Login from './Login';
@@ -22,7 +22,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/menu' component={Menu} />
-            <ProtectedRoute exact path='/order' component={Order} />
+            <ProtectedRoute exact path='/order' component={PlaceOrder} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <Route component={NoMatch} />
