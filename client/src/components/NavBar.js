@@ -29,7 +29,7 @@ class NavBar extends Component {
       </Menu.Menu>
     );
   }
-
+  
   render() {
     return (
       <div>
