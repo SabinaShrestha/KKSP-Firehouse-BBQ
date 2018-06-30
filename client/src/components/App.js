@@ -12,6 +12,7 @@ import Home from './Home';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import { Segment } from 'semantic-ui-react';
+import ProtectedRoute from './ProtectedRoute';
 
 class App extends React.Component {
   render() {
@@ -37,7 +38,7 @@ class App extends React.Component {
 
 const styles = {
   background: {
-    backgroundColor: '#000000',
+    backgroundColor: '#e6e6e6',
   },
 }
 export default App;
