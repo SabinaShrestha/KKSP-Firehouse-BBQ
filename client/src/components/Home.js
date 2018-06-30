@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Header, Segment, Divider, Grid } from 'semantic-ui-react';
-
+import { Header, Image, Segment, Divider, Grid } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
+import darthvader from '../assets/images/darthvader.png'
 
 class Home extends Component {
   
@@ -14,7 +16,7 @@ class Home extends Component {
             as='h1' 
             textAlign='center'
             style={styles.header}>
-            BUBBA'S BBQ
+            Not Your Father's BBQ
           </Header>
         </Segment>
         <Grid>
@@ -23,12 +25,14 @@ class Home extends Component {
             tablet={8} 
             mobile={16}>
             <Segment inverted>
-              <Header
-                as='h2'
-                textAlign='center'
-                style={styles.header}>
-                Welcome
-              </Header>
+            <Link to='/login'>
+                  <Header
+                    as='h3'
+                    textAlign='center'
+                    style={styles.header}>
+                  <Menu.Item name='login' />
+                  </Header>  
+                </Link>
               <Divider />
             </Segment>
           </Grid.Column>
@@ -37,16 +41,34 @@ class Home extends Component {
             tablet={8} 
             mobile={16}>
             <Segment inverted>
-              <Header
-                as='h2'
-                textAlign='center'
-                style={styles.header}>
-                Menu
-              </Header>
+              <Link to='/about'>
+                  <Header
+                    as='h3'
+                    textAlign='center'
+                    style={styles.header}>
+                  <Menu.Item name='About Us' />
+                  </Header>  
+                </Link>
               <Divider />
             </Segment>
           </Grid.Column>
         </Grid>
+        <Grid.Column 
+            computer={8} 
+            tablet={8} 
+            mobile={16}>
+        <Segment invert>
+            <div
+            align='center'
+            style={styles.header}
+            weidth='800'px
+            height='800px'
+            >
+          <Image src={darthvader}/>
+            </div>
+      
+        </Segment>
+        </Grid.Column>
       </Segment>
     );
   }
@@ -61,7 +83,7 @@ const styles = {
   },
   background: {
     backgroundColor: '#000000',
-    },
+  },
 }
 
 
