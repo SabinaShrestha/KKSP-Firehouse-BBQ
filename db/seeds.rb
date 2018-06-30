@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+@admin = User.create(
+  name: 'admin',
+  nickname: 'admin',
+  email: 'admin@admin.com',
+  password: 'password',
+  image: "https://robohash.org/#{Faker::Number.number(1)}?set=set2"
+)
+
+@visitor = User.create(
+  name: 'visitor 1',
+  nickname: 'visitor',
+  email: 'test@test.com',
+  password: 'password',
+  image: "https://robohash.org/#{Faker::Number.number(1)}?set=set1"
+)
+
+20.times do
+  name =   Faker::Food.dish
+  price =  Faker::Number.between(1-10)
+  category = Faker::Number.between(1-3)
+  Item.create(
+    name: name,
+    price: price,
+    category: category,
+  )
+end
+
+puts 'seeded'
+
