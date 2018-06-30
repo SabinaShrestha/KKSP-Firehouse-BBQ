@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Menu from './Menu'
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Login from './Login';
@@ -19,6 +20,7 @@ class App extends Component {
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/menu' component={Menu} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <Route component={NoMatch} />
