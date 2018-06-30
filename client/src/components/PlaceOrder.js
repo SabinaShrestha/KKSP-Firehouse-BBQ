@@ -7,6 +7,8 @@ import { Table,
 import { connect } from 'react-redux';
 import { getItems } from '../reducers/items'
 import Order from './Order'
+import { Link } from 'react-router-dom';
+import Checkout from './Checkout'
 
 class PlaceOrder extends React.Component {
 	state = { cart: [] }
@@ -39,6 +41,11 @@ class PlaceOrder extends React.Component {
 	render () {
 		return (
 			<Container>
+				{ this.state.cart.length > 0 ?
+					<Order cart={this.state.cart} />
+					:
+					null
+				}
 				<Table basic="very">
 					<Table.Header>
 						<Table.HeaderCell>Menu</Table.HeaderCell>
@@ -47,11 +54,6 @@ class PlaceOrder extends React.Component {
 	    			{ this.listItems() }
 	    		</Table.Body>
 				</Table>
-				{ this.state.cart.length > 0 ? 
-					<Order cart={this.state.cart} />
-					:
-					null
-				}
 			</Container>
 		)
 	}

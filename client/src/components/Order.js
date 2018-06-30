@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Table } from 'semantic-ui-react';
+import { Table, Container, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
 
 class Order extends React.Component {
 
@@ -28,24 +29,27 @@ class Order extends React.Component {
 
 	render() {
 		return (
-			<Table basic="very">
-				<Table.Header>
-					<Table.Row>
-	    			<Table.HeaderCell colSpan='3'>Your Order</Table.HeaderCell>
-	    		</Table.Row>
-	    	</Table.Header>
-	    		<Table.Body>
-	    			{ this.showOrder() }
-	    			<Table.Row>
-	    				<Table.Cell>
-	    					total
-	    				</Table.Cell>
-	    				<Table.Cell>
-	    					{ this.sumOrder() }
-	    				</Table.Cell>
-	    			</Table.Row>
-	    		</Table.Body>
-			</Table>
+			<Container>
+				<Table basic="very">
+					<Table.Header>
+						<Table.Row>
+		    			<Table.HeaderCell colSpan='3'>Your Order</Table.HeaderCell>
+		    		</Table.Row>
+		    	</Table.Header>
+		    		<Table.Body>
+		    			{ this.showOrder() }
+		    			<Table.Row>
+		    				<Table.Cell>
+		    					total
+		    				</Table.Cell>
+		    				<Table.Cell>
+		    					{ this.sumOrder() }
+		    				</Table.Cell>
+		    			</Table.Row>
+		    		</Table.Body>
+				</Table>
+				<Button><Link to='/checkout'>Checkout</Link></Button>
+			</Container>
 		)
 	}
 }
