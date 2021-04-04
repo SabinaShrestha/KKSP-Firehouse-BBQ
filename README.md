@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+to run the server : run rails s in one terminal window, open new terminal tab and run cd client && yarn start
+
 * ...
